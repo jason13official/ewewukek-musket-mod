@@ -1,6 +1,7 @@
 package io.github.jason13official.musketmod.platform;
 
 import io.github.jason13official.musketmod.Constants;
+import io.github.jason13official.musketmod.MusketMod;
 import io.github.jason13official.musketmod.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
@@ -24,7 +25,7 @@ public class Services {
         final T loadedService = ServiceLoader.load(clazz)
                 .findFirst()
                 .orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
-        Constants.LOG.debug("Loaded {} for service {}", loadedService, clazz);
+        MusketMod.LOG.debug("Loaded {} for service {}", loadedService, clazz);
         return loadedService;
     }
 }

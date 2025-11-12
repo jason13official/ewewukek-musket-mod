@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "io.github.jason13official.musketmod.MusketModFabric"
+    ],
+    "client": [
+      "io.github.jason13official.musketmod.MusketModClientFabric"
     ]
   },
   "mixins": [
